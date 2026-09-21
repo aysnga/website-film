@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Daftar Film Terkenal</title>
+    <link rel="icon" type="image/x-icon" href="img/ux-design.png">
+    <meta name="keywords" content="film, animation, fantasy, action">
+
+    <script>
+
+        function playPause(id) {
+            var video = document.getElementById(id);
+
+            if (video.paused) {
+                video.play();
+            } else {
+                video.pause();
+            }
+        }
+
+        function big(id) {
+            var video = document.getElementById(id);
+            video.width = 600;
+        }
+
+        function small(id) {
+            var video = document.getElementById(id);
+            video.width = 300;
+        }
+
+        function normal(id) {
+            var video = document.getElementById(id);
+            video.width = 450;
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <h1>Website Film Terkenal</h1>
+    <h3>Daftar Film-Film Terkenal</h3>
+
+    <hr width="100%" size="3" color="blue">
+
+    <pre>
+<a href="index.html">Home</a>       |       <a href="film.html">Film</a>       |       <a href="about.html">About</a>       |       <a href="gallery.html">Gallery</a>       |       <a href="kontak.html">Kontak</a>
+    </pre>
+
+    <hr width="100%" size="3" color="blue">
+
+    Berikut beberapa film terkenal yang akan ditampilkan.
+
+    <hr width="75%" size="3" color="blue" align="left">
+
+    <!-- FILM 1-->
+
+    <h1>The Lion King</h1>
+
+    <p align="justify">
+        The Lion King adalah film animasi musikal klasik yang menceritakan
+        kisah Simba, seekor singa muda yang harus menemukan jati dirinya
+        dan merebut kembali takhtanya sebagai raja hutan setelah kematian
+        ayahnya, Mufasa.
+    </p>
+
+    <img src="film1.jpg" width="200">
+
+    <br><br>
+
+    <h3>Trailer The Lion King</h3>
+
+    <button onclick="playPause('video1')">Play/Pause</button>
+    <button onclick="big('video1')">Big</button>
+    <button onclick="small('video1')">Small</button>
+    <button onclick="normal('video1')">Normal</button>
+
+    <br><br>
+
+    <video id="video1" width="450" height="340" controls>
+        <source src="TrailerFilm1.mp4" type="video/mp4">
+        Browser Anda tidak mendukung video
+    </video>
+
+    <p>
+        Harga Tiket: &dollar;17
+    </p>
+
+    <hr width="75%" size="3" color="blue" align="left">
+
+
+    <!-- FILM 2 -->
+
+    <h2>Harry Potter</h2>
+
+    <p align="justify">
+        Harry Potter mengisahkan seorang penyihir remaja bernama Harry Potter
+        bersama sahabatnya, Ron Weasley dan Hermione Granger, di Sekolah Sihir
+        Hogwarts serta perjuangannya melawan penyihir jahat Lord Voldemort.
+    </p>
+
+    <img src="film2.jpg" width="200">
+
+        <br><br>
+
+    <h3>Trailer Harry Potter</h3>
+
+    <button onclick="playPause('video2')">Play/Pause</button>
+    <button onclick="big('video2')">Big</button>
+    <button onclick="small('video2')">Small</button>
+    <button onclick="normal('video2')">Normal</button>
+
+    <br><br>
+
+    <video id="video2" width="450" height="340" controls>
+        <source src="TrailerFilm2.mp4" type="video/mp4">
+        Browser Anda tidak mendukung video
+    </video>
+
+    <p>
+        Harga Tiket: &dollar;13
+    </p>
+
+    <hr width="75%" size="3" color="blue" align="left">
+
+
+    <!-- FILM 3 -->
+
+    <h2>Avengers: Endgame</h2>
+
+    <p align="justify">
+        Avengers: Endgame menceritakan perjuangan para pahlawan super untuk
+        menghadapi ancaman besar dan menyelamatkan dunia. Para Avengers harus
+        bekerja sama untuk menghadapi musuh yang kuat dan menentukan nasib
+        umat manusia.
+    </p>
+
+    <img src="film3.jpg" width="200">
+
+    <br><br>
+
+    <h3>Trailer Avengers: Endgame</h3>
+
+    <button onclick="playPause('video3')">Play/Pause</button>
+    <button onclick="big('video3')">Big</button>
+    <button onclick="small('video3')">Small</button>
+    <button onclick="normal('video3')">Normal</button>
+
+    <br><br>
+
+    <video id="video3" width="450" height="340" controls>
+        <source src="TrailerFilm3.mp4" type="video/mp4">
+        Browser Anda tidak mendukung video
+    </video>
+
+    <p>
+        Harga Tiket: &dollar;21
+    </p>
+
+    <hr width="75%" size="3" color="blue" align="left">
+
+
+    <!-- FILM 4 -->
+
+    <h2>Interstellar</h2>
+
+    <p align="justify">
+        Interstellar adalah film fiksi ilmiah yang menceritakan perjalanan
+        sekelompok astronaut menjelajahi luar angkasa untuk mencari planet
+        baru yang dapat menjadi tempat tinggal bagi manusia.
+    </p>
+
+    <img src="film4.jpg" width="200">
+
+    <br><br>
+
+    <h3>Trailer Interstellar</h3>
+
+    <button onclick="playPause('video4')">Play/Pause</button>
+    <button onclick="big('video4')">Big</button>
+    <button onclick="small('video4')">Small</button>
+    <button onclick="normal('video4')">Normal</button>
+
+    <br><br>
+
+    <video id="video4" width="450" height="340" controls>
+        <source src="TrailerFilm4.mp4" type="video/mp4">
+        Browser Anda tidak mendukung video
+    </video>
+
+    <p>
+        Harga Tiket: &dollar;16
+    </p>
+
+    <hr width="75%" size="3" color="blue" align="left">
+
+
+    <!-- FILM 5 -->
+
+    <h2>Spirited Away</h2>
+
+    <p align="justify">
+        Spirited Away adalah film animasi fantasi yang menceritakan seorang
+        anak perempuan bernama Chihiro yang masuk ke dunia penuh makhluk
+        ajaib dan harus berusaha menyelamatkan keluarganya.
+    </p>
+
+    <img src="film5.jpg" width="200">
+
+    <br><br>
+
+    <h3>Trailer Spirited</h3>
+
+    <button onclick="playPause('video5')">Play/Pause</button>
+    <button onclick="big('video5')">Big</button>
+    <button onclick="small('video5')">Small</button>
+    <button onclick="normal('video5')">Normal</button>
+
+    <br><br>
+
+    <video id="video5" width="450" height="340" controls>
+        <source src="TrailerFilm5.mp4" type="video/mp4">
+        Browser Anda tidak mendukung video
+    </video>
+
+    <p>
+        Harga Tiket: &dollar;18
+    </p>
+
+    <hr width="100%" size="2" color="gray">
+
+    <p>
+        &copy; 2026 Website Film Terkenal
+    </p>
+    <p>Admin Website Film, Me</p>
+
+</body> 
+
+</html> 
