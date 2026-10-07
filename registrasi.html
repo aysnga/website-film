@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <title>Registrasi Pelanggan</title>
+
+        <link rel="icon" type="image/x-icon" href="img/ux-design.png">
+
+        <meta name="keywords" content="film, animation, fantasy, box office">
+
+        <style>
+
+            /* Mengatur tampilan seluruh halaman */
+            body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+                color: #222;
+            }
+
+            /* Mengatur judul */
+            h1 {
+                margin-bottom: 5px;
+            }
+
+            h3 {
+                margin-top: 0;
+            }
+
+            /* Mengatur kotak form */
+            .form-container {
+                width: 600px;
+                border: 1px solid #ccc;
+                padding: 20px;
+                margin-top: 20px;
+                margin-bottom: 25px;
+            }
+
+            /* Mengatur jarak setiap bagian form */
+            .form-group {
+                margin-bottom: 18px;
+            }
+
+            /* Mengatur label */
+            label {
+                font-weight: bold;
+            }
+
+            /* Mengatur textbox dan combobox */
+            input[type="text"],
+            input[type="email"],
+            input[type="password"],
+            select {
+                width: 95%;
+                padding: 9px;
+                margin-top: 7px;
+                border: 1px solid #aaa;
+                border-radius: 3px;
+                font-size: 14px;
+            }
+
+            /* Mengatur checkbox */
+            input[type="checkbox"] {
+                width: auto;
+                margin-top: 10px;
+            }
+
+            /* Label tampilkan password */
+            .password-check {
+                font-weight: normal;
+                font-size: 14px;
+            }
+
+            /* Mengatur pilihan pembayaran */
+            .payment-option {
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+
+            .payment-option label {
+                font-weight: normal;
+            }
+
+            /* Mengatur bagian detail pembayaran */
+            .payment-detail {
+                background-color: #f5f5f5;
+                border-left: 4px solid blue;
+                padding: 15px;
+                margin-top: 10px;
+                margin-bottom: 15px;
+            }
+
+            /* Mengatur logo pembayaran */
+            .payment-logo {
+                height: 35px;
+                margin-right: 10px;
+                vertical-align: middle;
+            }
+
+            /* Mengatur tombol */
+            .button {
+                background-color: blue;
+                color: white;
+                border: none;
+                padding: 10px 25px;
+                font-size: 14px;
+                cursor: pointer;
+                border-radius: 3px;
+            }
+
+            /* Efek tombol */
+            .button:hover {
+                background-color: darkblue;
+            }
+
+            /* Tombol kembali */
+            .button-kembali {
+                background-color: gray;
+            }
+
+            .button-kembali:hover {
+                background-color: #555;
+            }
+
+            /* Bagian pembayaran */
+            #bagianPembayaran {
+                display: none;
+            }
+
+            /* Bagian channel pembayaran */
+            #channelPembayaran {
+                display: none;
+            }
+
+            /* Notifikasi */
+            .notifikasi {
+                background-color: #e8f5e9;
+                border: 1px solid #4caf50;
+                padding: 12px;
+                margin-bottom: 20px;
+                color: #256029;
+            }
+
+            /* Tampilan pembayaran berhasil */
+            .berhasil {
+                text-align: center;
+                padding: 20px;
+                border: 1px solid #4caf50;
+                background-color: #f1f8f1;
+            }
+
+            /* Logo channel digital */
+            .logo-channel {
+                width: 80px;
+                height: 45px;
+                object-fit: contain;
+                margin-bottom: 10px;
+            }
+
+        </style>
+
+    </head>
+
+
+<body>
+
+    <!-- Judul website -->
+    <h1>Website Film Terkenal</h1>
+
+    <h3>Kumpulan Film-Film Terkenal</h3>
+
+    <hr width="100%" size="3" color="blue">
+
+
+    <!-- Menu navigasi -->
+    <pre>
+<a href="index.html">Home</a>       |       <a href="film.html">Film</a>       |       <a href="about.html">About</a>       |       <a href="gallery.html">Gallery</a>       |       <a href="kontak.html">Kontak</a>       |       <a href="registrasi.html">Registrasi</a>
+    </pre>
+
+    <hr width="100%" size="3" color="blue">
+
+
+    <!-- ===================================================== -->
+    <!-- BAGIAN REGISTRASI -->
+    <!-- ===================================================== -->
+
+    <div id="bagianRegistrasi">
+        <h2>Registrasi Pelanggan</h2>
+
+        <p>
+            Silakan isi form berikut untuk melakukan registrasi pelanggan.
+        </p>
+
+        <div class="form-container">
+
+            <form id="formRegistrasi">
+
+
+                <!-- Nama Lengkap -->
+                <div class="form-group">
+
+                    <label for="nama">
+                        Nama Lengkap
+                    </label>
+
+                    <br>
+
+                    <input type="text"
+                           id="nama"
+                           name="nama"
+                           placeholder="Masukkan nama lengkap"
+                           required>
+
+                </div>
+
+
+                <!-- Email -->
+                <div class="form-group">
+
+                    <label for="email">
+                        Email
+                    </label>
+
+                    <br>
+
+                    <input type="email"
+                           id="email"
+                           name="email"
+                           placeholder="Masukkan email"
+                           required>
+
+                </div>
+
+                <!-- Password -->
+                <div class="form-group">
+
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <br>
+
+                    <input type="password"
+                           id="password"
+                           name="password"
+                           placeholder="Masukkan password"
+                           required>
+
+                    <br>
+
+                    <input type="checkbox"
+                           id="lihatPassword"
+                           onclick="tampilkanPassword()">
+
+                    <label for="lihatPassword"
+                           class="password-check">
+
+                        Tampilkan Password
+
+                    </label>
+
+                </div>
+
+                <!-- Pilihan Paket -->
+                <div class="form-group">
+
+                    <label for="paket">
+                        Pilihan Paket
+                    </label>
+
+                    <br>
+
+                    <select id="paket"
+                            name="paket"
+                            required>
+
+                        <option value="">
+                            -- Pilih Paket --
+                        </option>
+
+                        <option value="Basic">
+                            Basic
+                        </option>
+
+                        <option value="Premium">
+                            Premium
+                        </option>
+
+                        <option value="VIP">
+                            VIP
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <!-- Tombol registrasi -->
+                <input type="submit"
+                       value="Daftar Sekarang"
+                       class="button">
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <!-- ===================================================== -->
+    <!-- BAGIAN PEMBAYARAN -->
+    <!-- ===================================================== -->
+
+    <div id="bagianPembayaran">
+
+        <h2>Pembayaran Pelanggan</h2>
+
+        <div id="notifikasiRegistrasi"
+             class="notifikasi">
+
+            Registrasi berhasil! Silakan lanjutkan ke pembayaran.
+
+        </div>
+
+        <div class="form-container">
+
+            <h3 id="namaPelanggan"></h3>
+
+            <p>
+                <b>Paket yang dipilih:</b>
+                <span id="paketPelanggan"></span>
+            </p>
+
+            <!-- Pilihan pembayaran -->
+            <div class="form-group">
+
+                <label>
+                    Pilihan Pembayaran
+                </label>
+
+                <!-- Kartu -->
+                <div class="payment-option">
+
+                    <input type="radio"
+                           id="pilihKartu"
+                           name="metodePembayaran"
+                           value="kartu"
+                           onclick="pilihKartu()">
+
+                    <label for="pilihKartu">
+                        Kartu Debit/Kredit
+                    </label>
+
+                </div>
+
+                <!-- Dompet digital -->
+                <div class="payment-option">
+
+                    <input type="radio"
+                           id="pilihDompet"
+                           name="metodePembayaran"
+                           value="dompet"
+                           onclick="pilihDompet()">
+
+                    <label for="pilihDompet">
+                        Dompet Digital
+                    </label>
+
+                </div>
+
+            </div>
+
+            <!-- ================================================= -->
+            <!-- PEMBAYARAN KARTU -->
+            <!-- ================================================= -->
+
+            <div id="formKartu"
+                 class="payment-detail"
+                 style="display: none;">
+
+                <b>Pembayaran Kartu Debit/Kredit</b>
+
+                <br><br>
+
+                <!-- Logo Visa -->
+                <img src="img/visa.png"
+                     alt="Visa"
+                     class="payment-logo">
+
+
+                <!-- Logo Mastercard -->
+                <img src="img/mastercard.png"
+                     alt="Mastercard"
+                     class="payment-logo">
+
+                <br><br>
+
+                <label for="nomorKartu">
+                    Nomor Kartu
+                </label>
+
+                <br>
+
+                <input type="text"
+                       id="nomorKartu"
+                       placeholder="Contoh: 1234 5678 9012 3456">
+
+                <br><br>
+
+                <button type="button"
+                        class="button"
+                        onclick="prosesPembayaran('Kartu Debit/Kredit')">
+
+                    Bayar Sekarang
+
+                </button>
+
+            </div>
+
+            <!-- ================================================= -->
+            <!-- PEMBAYARAN DOMPET DIGITAL -->
+            <!-- ================================================= -->
+
+            <div id="formDompet"
+                 class="payment-detail"
+                 style="display: none;">
+
+                <b>Pilih Dompet Digital</b>
+
+                <br><br>
+
+                <!-- DANA -->
+                <div class="payment-option">
+
+                    <input type="radio"
+                           id="dana"
+                           name="jenisDompet"
+                           value="DANA"
+                           onclick="tampilkanChannel('DANA')">
+
+                    <label for="dana">
+                        DANA
+                    </label>
+
+                </div>
+
+                <!-- OVO -->
+                <div class="payment-option">
+
+                    <input type="radio"
+                           id="ovo"
+                           name="jenisDompet"
+                           value="OVO"
+                           onclick="tampilkanChannel('OVO')">
+
+                    <label for="ovo">
+                        OVO
+                    </label>
+
+                </div>
+
+                <!-- GoPay -->
+                <div class="payment-option">
+
+                    <input type="radio"
+                           id="gopay"
+                           name="jenisDompet"
+                           value="GoPay"
+                           onclick="tampilkanChannel('GoPay')">
+
+                    <label for="gopay">
+                        GoPay
+                    </label>
+
+                </div>
+
+                <!-- ShopeePay -->
+                <div class="payment-option">
+
+                    <input type="radio"
+                           id="shopeepay"
+                           name="jenisDompet"
+                           value="ShopeePay"
+                           onclick="tampilkanChannel('ShopeePay')">
+
+                    <label for="shopeepay">
+                        ShopeePay
+                    </label>
+
+                </div>
+
+            </div>
+
+            <!-- ================================================= -->
+            <!-- CHANNEL PEMBAYARAN -->
+            <!-- ================================================= -->
+
+            <div id="channelPembayaran"
+                 class="payment-detail">
+
+                <h3 id="namaChannel"></h3>
+
+                <p>
+                    Kamu sedang berada di channel pembayaran
+                    <b id="channelText"></b>.
+                </p>
+
+                <p>
+                    Silakan klik tombol di bawah untuk
+                    menyelesaikan pembayaran.
+                </p>
+
+                <button type="button"
+                        class="button"
+                        onclick="selesaikanPembayaran()">
+
+                    Konfirmasi Pembayaran
+
+                </button>
+
+            </div>
+
+            <!-- Tombol kembali -->
+            <br>
+
+            <button type="button"
+                    class="button button-kembali"
+                    onclick="kembaliRegistrasi()">
+
+                Kembali ke Registrasi
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- ===================================================== -->
+    <!-- BAGIAN PEMBAYARAN BERHASIL -->
+    <!-- ===================================================== -->
+
+    <div id="pembayaranBerhasil"
+         style="display: none;">
+
+        <h2>Pembayaran Selesai</h2>
+
+
+        <div class="form-container berhasil">
+
+            <h2>✓ Pembayaran Berhasil!</h2>
+
+            <p>
+                Terima kasih telah melakukan pembayaran.
+            </p>
+
+            <p>
+                Registrasi pelanggan kamu telah selesai.
+            </p>
+
+            <br>
+
+            <button type="button"
+                    class="button"
+                    onclick="kembaliRegistrasi()">
+
+                Kembali ke Halaman Registrasi
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <hr width="100%" size="2" color="gray">
+
+    <p>Admin Website Film, Me</p>
+
+    <!-- ===================================================== -->
+    <!-- JAVASCRIPT -->
+    <!-- ===================================================== -->
+
+    <script>
+
+        // Menampilkan atau menyembunyikan password
+        function tampilkanPassword() {
+
+            var password =
+                document.getElementById("password");
+
+            var checkbox =
+                document.getElementById("lihatPassword");
+
+
+            if (checkbox.checked) {
+
+                password.type = "text";
+
+            } else {
+
+                password.type = "password";
+
+            }
+
+        }
+
+        // Ketika form registrasi dikirim
+        document.getElementById("formRegistrasi")
+        .addEventListener("submit", function(event) {
+
+            // Mencegah halaman melakukan refresh
+            event.preventDefault();
+
+            // Mengambil nama pelanggan
+            var nama =
+                document.getElementById("nama").value;
+
+            // Mengambil paket pelanggan
+            var paket =
+                document.getElementById("paket").value;
+
+            // Menampilkan nama pelanggan
+            document.getElementById("namaPelanggan")
+            .innerHTML =
+                "Halo, " + nama + "!";
+
+            // Menampilkan paket pelanggan
+            document.getElementById("paketPelanggan")
+            .innerHTML = paket;
+
+            // Menyembunyikan bagian registrasi
+            document.getElementById("bagianRegistrasi")
+            .style.display = "none";
+
+            // Menampilkan bagian pembayaran
+            document.getElementById("bagianPembayaran")
+            .style.display = "block";
+
+            // Memberikan notifikasi
+            alert(
+                "Registrasi berhasil! Silakan lanjut ke pembayaran."
+            );
+
+        });
+
+        // Memilih metode kartu
+        function pilihKartu() {
+
+            // Menampilkan form kartu
+            document.getElementById("formKartu")
+            .style.display = "block";
+
+            // Menyembunyikan form dompet
+            document.getElementById("formDompet")
+            .style.display = "none";
+
+            // Menyembunyikan channel
+            document.getElementById("channelPembayaran")
+            .style.display = "none";
+
+        }
+
+        // Memilih metode dompet digital
+        function pilihDompet() {
+
+            // Menampilkan pilihan dompet
+            document.getElementById("formDompet")
+            .style.display = "block";
+
+            // Menyembunyikan form kartu
+            document.getElementById("formKartu")
+            .style.display = "none";
+
+            // Menyembunyikan channel
+            document.getElementById("channelPembayaran")
+            .style.display = "none";
+
+        }
+
+        // Menampilkan channel pembayaran
+        function tampilkanChannel(channel) {
+
+            // Menampilkan nama channel
+            document.getElementById("namaChannel")
+            .innerHTML =
+                "Pembayaran " + channel;
+
+            // Menampilkan teks channel
+            document.getElementById("channelText")
+            .innerHTML = channel;
+
+            // Menampilkan bagian channel
+            document.getElementById("channelPembayaran")
+            .style.display = "block";
+
+        }
+
+        // Memproses pembayaran
+        function prosesPembayaran(metode) {
+
+            // Mengecek nomor kartu
+            var nomorKartu =
+                document.getElementById("nomorKartu").value;
+
+            // Jika nomor kartu belum diisi
+            if (nomorKartu === "") {
+
+                alert("Silakan masukkan nomor kartu terlebih dahulu.");
+
+                return;
+
+            }
+
+            // Menampilkan channel kartu
+            document.getElementById("namaChannel")
+            .innerHTML =
+                "Channel " + metode;
+
+            // Menampilkan teks channel
+            document.getElementById("channelText")
+            .innerHTML = metode;
+
+            // Menampilkan channel pembayaran
+            document.getElementById("channelPembayaran")
+            .style.display = "block";
+
+        }
+
+        // Menyelesaikan pembayaran
+        function selesaikanPembayaran() {
+
+            // Menyembunyikan bagian pembayaran
+            document.getElementById("bagianPembayaran")
+            .style.display = "none";
+
+            // Menampilkan pembayaran berhasil
+            document.getElementById("pembayaranBerhasil")
+            .style.display = "block";
+
+            // Memberikan notifikasi
+            alert("Pembayaran berhasil!");
+
+        }
+
+        // Kembali ke halaman registrasi
+        function kembaliRegistrasi() {
+
+            // Menampilkan kembali registrasi
+            document.getElementById("bagianRegistrasi")
+            .style.display = "block";
+
+            // Menyembunyikan pembayaran
+            document.getElementById("bagianPembayaran")
+            .style.display = "none";
+
+            // Menyembunyikan pembayaran berhasil
+            document.getElementById("pembayaranBerhasil")
+            .style.display = "none";
+
+            // Mengembalikan form registrasi ke keadaan awal
+            document.getElementById("formRegistrasi")
+            .reset();
+
+            // Menyembunyikan detail kartu
+            document.getElementById("formKartu")
+            .style.display = "none";
+
+            // Menyembunyikan detail dompet
+            document.getElementById("formDompet")
+            .style.display = "none";
+
+            // Menyembunyikan channel pembayaran
+            document.getElementById("channelPembayaran")
+            .style.display = "none";
+
+        }
+
+    </script>
+
+</body>
+
+</html>
